@@ -23,14 +23,14 @@ data "aws_ami" "centos7mini" {
   }
 }
 
-resource "aws_instance" "tf-test-server" {
-  ami           = data.aws_ami.centos7mini.id
-  instance_type = "t2.micro"
+# resource "aws_instance" "tf-test-server" {
+#   ami           = data.aws_ami.centos7mini.id
+#   instance_type = "t2.micro"
 
-  subnet_id = aws_subnet.subnet1.id
+#   subnet_id = aws_subnet.subnet1.id
 
-  tags = {
-    Name = "tf-test-server"
-  }
-}
+#   tags = {
+#     Name = "tf-test-server"
+#   }
+# }
 

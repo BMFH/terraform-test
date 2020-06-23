@@ -9,12 +9,18 @@ resource "aws_subnet" "subnet1" {
   cidr_block        = cidrsubnet(aws_vpc.tf-vpc-1.cidr_block, 4, 1)
   vpc_id            = aws_vpc.tf-vpc-1.id
   availability_zone = "eu-central-1a"
+  tags = {
+    Name = var.subnets["subnet1"]
+  }
 }
 
 resource "aws_subnet" "subnet2" {
   cidr_block        = cidrsubnet(aws_vpc.tf-vpc-1.cidr_block, 4, 2)
   vpc_id            = aws_vpc.tf-vpc-1.id
   availability_zone = "eu-central-1b"
+  tags = {
+    Name = var.subnets["subnet2"]
+  }
 }
 
 resource "aws_security_group" "tf-subnet-sg" {
