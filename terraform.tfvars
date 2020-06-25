@@ -1,4 +1,4 @@
 subnets = {
-    subnet1 = "SUBNET1+"
-    subnet2 = "SUBNET2+"
+  subnet1 = "SUBNET1+"
+  subnet2 = "SUBNET2+"
 }
